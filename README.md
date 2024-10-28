@@ -4,3 +4,4 @@
 # Feel free to submit issues or contributre via pull requests. Every contribution helps and I welcome feedback from the community.
 # Special thanks to the Bot.dev team for providing the guidance and educational resources through the development process.
 # For questions please contact the creator at Gewnthar@gmail.com
+# BookBot is my first project!
