@@ -5,3 +5,4 @@
 # Special thanks to the Bot.dev team for providing the guidance and educational resources through the development process.
 # For questions please contact the creator at Gewnthar@gmail.com
 # BookBot is my first project!
+# .gitignore provided by github thanks!
