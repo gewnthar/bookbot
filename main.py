@@ -13,9 +13,7 @@ def main():
     #call count_characters
     char_count = count_characters(text)
     print(f"Character counts!:{char_count}")
-    print_report = count_characters(text)
-
-    print(print_report)
+    print_report(char_count, num_words)
 
 
 def get_num_words(text):
@@ -50,11 +48,15 @@ def count_characters(text):
 def sort_on(dict):
     return dict["num"]
 
-def print_report(char_count, num_words):  # Added num_words parameter
+def print_report(char_count, num_words):
     print("--- Begin report of books/frankenstein.txt ---")
     print(f"{num_words} words found in the document\n")
     
-    char_list = []
+    char_list = [
+        {"char": char, "num": count}
+        for char, count in char_count.items() if char.isalpha()]
+    char_list.sort(key=sort_on, reverse=True)
+
     for char, count in char_count.items():
         if char.isalpha():
             char_dict = {"char": char, "num": count}
@@ -64,7 +66,7 @@ def print_report(char_count, num_words):  # Added num_words parameter
     
     # Now loop through the sorted list and print each line
     for char_dict in char_list:
-        print(f"The {char} character was found {num} times")
+        print(f"The {char_dict['char']} character was found {char_dict['num']} times")
     print("--- End report ---")
 # calling main function many places insist on usintg the __name__ thing not sure what thats about.
 main()
