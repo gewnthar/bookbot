@@ -6,9 +6,17 @@ def main():
     text = get_book_text(book_path)
     #this prints the entire text of frankenstein in the terminal
     #print(text)
-    num_words = get_num_words(text)
-    print(f"{num_words} words found in the document")
-
+    #call get_num_words
+    #num_words = get_num_words(text)
+    #print(f"{num_words} words found in the document")
+    
+    #call count_characters
+    #char_count = count_characters(text)
+    #print(f"Character counts!:{char_count}")
+    print_report = count_characters(text)
+    print("--- Begin report of books/frankenstein.txt ---")
+    print(print_report)
+    print("--- End report ---")
 
 def get_num_words(text):
     #split the book into words with the split method. this uses whitespace as the seperator
@@ -22,6 +30,29 @@ def get_book_text(path):
     with open(path) as f:
         return f.read()
 
-
+#back to the old text call again old hat by now
+def count_characters(text):
+    #only wanted lower characters so making them all lower
+    text = text.lower()
+    #make a dictionary as called for in the instructions
+    char_count = {}
+    #use char to iterate over everything in text
+    for char in text:
+        #check the text to see if the character exists if it does add 1
+        if char in char_count:
+            char_count[char] += 1
+        #if it doesn't exist in the dictionary its the first time its being put in so count 1
+        else:
+            char_count[char] = 1
+    return char_count
+        
+def print_report(char_count):
+    chars_list = []
+    for c in char_count:
+        char_list.append[c]
+        char_list.sort(reverse=True, key=sort_on)
+        print(char_list)
+    
+    
 # calling main function many places insist on usintg the __name__ thing not sure what thats about.
 main()
