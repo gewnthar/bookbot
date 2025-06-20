@@ -1,4 +1,4 @@
-# bookbot is a project created under the guidance of Boot.dev
+# BookBot is my first [Boot.dev](https://www.boot.dev) project!
 # Mistakes in this code are purely the result of thecreator not fully understanding the instructions and bear no reflections on Boot.Dev. Any quirks or bugs are part of the learning process.
 # A journey of a thousand miles beings with a single step. -Laozi
 # Feel free to submit issues or contributre via pull requests. Every contribution helps and I welcome feedback from the community.
