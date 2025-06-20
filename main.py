@@ -1,4 +1,4 @@
-#defining main function to be called later
+print("greetings boots")
 def main():
     #make the path available to use by creating a variable
     book_path = "books/frankenstein.txt"
